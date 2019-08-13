@@ -6,7 +6,8 @@ ENV VERSION=3.2.3
 COPY book.json /srv/gitbook/book.json
 COPY book /srv/gitbook/book
 
-RUN npm install --global gitbook-cli -ddd && \
+RUN npm set registry https://registry.npm.taobao.org/ && \
+    npm install --global gitbook-cli -ddd && \
     gitbook fetch ${VERSION} && \
     gitbook install && \
     npm cache clear

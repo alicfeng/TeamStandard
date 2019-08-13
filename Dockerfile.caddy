@@ -1,0 +1,4 @@
+FROM abiosoft/caddy:1.0.0
+MAINTAINER AlicFeng <a@samego.com>
+
+COPY _book /srv
