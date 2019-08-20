@@ -1,2 +1,77 @@
-# TeamStandard
-团队开发规范
+## 团队开发规范 | TeamStandard
+
+#### 章节目录
+
+- [ ] **编码协作**
+    - [x] `Git` 工作流
+    - [x] `Git` 提交规范
+    - [x] Code风格统一
+    - [x] 代码审阅`CodeReview`
+- [ ] **面向项目**
+    - [ ] 语义化版本管理
+    - [ ] 文档编写
+- [ ] **标准`SDK`**
+    - [ ]  `LaravelHelper`
+    - [ ] `KubernetesClient`
+- [ ] **数据库**
+    - [x] MySQL规范
+    - [x] 数据库迭代迁移更新
+- [ ] **PHP规范**
+    - [ ] 编码姿势约定
+    - [ ] 基于Laravel的目录结构
+    - [ ] 配置信息与环境变量
+    - [ ] 日志规范
+    - [ ] 注释规范
+- [ ] **效率提升**
+    - [x] 那个程序员的`Linux`常用软件清单
+- [ ] **程序员的自我修养**
+
+
+
+#### book
+
+本规范文档基于 `gitbook` 构建 `web`服务，主要是便于阅览。
+
+###### 拉取镜像
+
+```shell
+# 此流程可以 ignore
+docker pull alicfeng/gitbook:team_standard_rc
+```
+
+###### 运行规范文档服务
+
+```shell
+docker run -it --name team_standard -p 8088:2015  alicfeng/gitbook:team_standard_rc
+```
+
+###### 文档预览
+
+![规范文档预览](https://upload-images.jianshu.io/upload_images/1678789-2d4be746371be671.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
