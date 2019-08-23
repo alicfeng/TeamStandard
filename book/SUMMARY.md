@@ -13,7 +13,7 @@
     * [文档编写](面向项目/文档编写.md)
 
 * [标准SDK](标准库sdk/README.md)
-    * [Kubernetes](标准库sdk/Kubernetes.md)
+    * [KubernetesClient](标准库sdk/Kubernetes.md)
     * [LaravelHelper](标准库sdk/LaravelHelper.md)
 
 * [数据库](数据库/README.md)
