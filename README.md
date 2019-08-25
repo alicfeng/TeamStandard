@@ -28,7 +28,7 @@
 - [ ] **效率提升**
     - [x] 那个程序员的`Linux`常用软件清单
 - [ ] **程序员的自我修养**
-    - [] 关爱自己
+    - [ ] 关爱自己
 
 
 
@@ -51,7 +51,7 @@ docker run -it --name team_standard -p 8088:2015  alicfeng/gitbook:team_standard
 
 ###### 文档预览
 
-![规范文档预览](https://upload-images.jianshu.io/upload_images/1678789-2d4be746371be671.png)
+![规范文档预览](https://raw.githubusercontent.com/alicfeng/TeamStandard/master/resource/mainUI.png)
 
 
 
