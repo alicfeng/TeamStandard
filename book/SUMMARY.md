@@ -9,7 +9,7 @@
     * [代码审阅CodeReview](编码协作/代码审查CodeReview.md)
 
 * [PHP规范](PHP/README.md)
-    * [编码姿势约定](PHP/编码姿势约定.md)
+    * [领略代码优雅与整洁之道](PHP/领略代码优雅与整洁之道.md)
     * [基于Laravel的目录结构](PHP/基于Laravel的目录结构.md)
     * [配置信息与环境变量](PHP/配置信息与环境变量.md)
     * [日志规范](PHP/日志规范.md)
@@ -19,7 +19,7 @@
     * [扩展目录规约](架构层面/扩展目录规约.md)
 
 * [标准SDK](标准库sdk/README.md)
-    * [KubernetesClient](标准库sdk/Kubernetes.md)
+    * [KubernetesClient](标准库sdk/KubernetesClient.md)
     * [LaravelHelper](标准库sdk/LaravelHelper.md)
 
 * [数据库](数据库/README.md)
@@ -34,8 +34,3 @@
     * [那个程序员的Linux常用软件清单](效率提升/那个程序员的Linux常用软件清单.md)
     
 * [程序员的自我修养](程序员的自我修养/README.md)
-
-
-
-
-

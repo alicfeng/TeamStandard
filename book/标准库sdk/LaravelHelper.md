@@ -1,4 +1,4 @@
-##  Laravel-helper
+##  LaravelHelper
 
 ####  Install
 
