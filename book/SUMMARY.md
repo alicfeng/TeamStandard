@@ -18,6 +18,7 @@
 
 * [架构层面](架构层面/README.md)
     * [扩展目录规约](架构层面/扩展目录规约.md)
+    * [信息安全](架构层面/信息安全.md)
 
 * [标准SDK](标准库sdk/README.md)
     * [KubernetesClient](标准库sdk/KubernetesClient.md)

@@ -1,28 +1,21 @@
-##  LaravelHelper
+Laravel-helper
+==============
 
-####  Install
+Laravel-helper Component is a simple package that has been designed to help you generate code specification and robust architecture.
 
-######  install by composer.json
+[![Latest Stable Version](http://img.shields.io/packagist/v/alicfeng/laravel-helper.svg)](https://packagist.org/packages/alicfeng/laravel-helper) [![Total Downloads](https://poser.pugx.org/alicfeng/laravel-helper/d/total.svg)](https://packagist.org/packages/alicfeng/laravel-helper) [![Build Status](http://img.shields.io/travis/alicfeng/laravel-helper.svg)](https://travis-ci.org/alicfeng/laravel-helper) 
 
-```json
-{
-    "require": {
-        "alicfeng/laravel-helper": "^1.1.1"
-    }
-}
-```
+## Get started
 
-######  install by cli
+#### install
 
 ```shell
-composer require alicfeng/laravel-helper:v1.1.1 -vvv
+composer require alicfeng/laravel-helper:v1.2.3 -vvv
 ```
 
+#### config
 
-
-####  Configurate
-
-######  Configure ServiceProvider
+###### app.php
 
 ```php
 'providers' => [
@@ -30,58 +23,77 @@ composer require alicfeng/laravel-helper:v1.1.1 -vvv
 ]
 ```
 
-######  Execute command on terminal
+###### public vendor
 
 ```php
 php artisan vendor:publish --provider="AlicFeng\Helper\ServiceProvider\HelperServiceProvider"
 ```
 
-######  Configuration file
+###### configuration
 
 > `config/helper.php`
 
 ```php
-<?php
-return [
-    // about package setting
-    'package' => [
-        /*Response Package Structure*/
-        'structure' => [
-            'code'    => 'code',
-            'message' => 'message',
-            'data'    => 'data',
-        ],
+// about package setting
+'package'   => [
+  /*Response Package Structure*/
+  'structure' => [
+    'code'    => 'code',
+    'message' => 'message',
+    'data'    => 'data',
+  ],
 
-        /*Package encrypt Setting*/
-        'crypt'     => [
-            'instance' => \AlicFeng\Helper\Crypt\HelperCryptService::class,
-            'method'   => 'aes-128-ecb',
-            'password' => '1234qwer',
-        ],
+  // Default Header simple:Content-Type => application/json
+  'header'    => [
 
-        /*Package format*/
-        'format'    => 'json',
+  ],
 
-        /*Log*/
-        'log'       => [
-            'log'   => true,
-            'level' => 'notice'
-        ],
-    ],
+  /*Package encrypt Setting*/
+  'crypt'     => [
+    'instance' => \AlicFeng\Helper\Crypt\HelperCryptService::class,
+    'method'   => 'aes-128-ecb',
+    'password' => '1234qwer',
+  ],
 
-    //  about log setting
-    'log'     => [
-        'extra_field' => [
-            'runtime_file'   => true,
-            'memory_message' => false,
-            'web_message'    => false,
-            'process_id'     => false,
-        ],
-    ],
+  /*Package format (json | xml)*/
+  'format'    => 'json',
 
-    // debug model setting
-    'debug'   => false,
-];
+  /*Log*/
+  'log'       => [
+    'log'   => true,
+    'level' => 'notice',
+  ],
+],
+
+// about log setting
+'log'       => [
+  'extra_field' => [
+    'runtime_file'   => true,
+    'memory_message' => false,
+    'web_message'    => false,
+    'process_id'     => false,
+  ],
+],
+
+// translate
+'translate' => [
+  'model'    => true,
+  'instance' => \AlicFeng\Helper\Translate\Translation::class,
+],
+
+// runtime model
+'runtime'   => [
+  'trace' => [
+    'request'    => true,
+    'response'   => false,
+    'filter_uri' => [
+
+    ]
+  ],
+],
+
+// debug model setting
+'debug'     => false,
 ```
 
 
@@ -106,40 +118,11 @@ return [
   Developers only care about the results of service processing, while the response structure is built by components.
 
   ```php
-  ## HelloController
-  class HelloController extends Controller
-  {
-      private $helloService;
-      public function __construct(HelloService $helloService)
-      {
-          $this->helloService = $helloService;
-      }
-      public function package()
-      {
-        	$name = request('name','');
-          return $this->helloService->package($name);
-      }
-  }
-  
-  ## BaseHelloService
-  class BaseHelloService {
-      /**
-       * @var ResponseHelper
-       */
-      protected $rspHelper;
-  
+  class HelloService extends HelperServiceAbstract {
       public function __construct()
       {
-          $this->rspHelper = app(ResponseHelper::class);
-      }
-  }
-  
-  ## HelloService 
-  class HelloService extends BaseHelloService {
-      public function __construct()
-    {
           parent::__construct();
-    }
+      }
       public function package(string $name = '')
       {
           $codeEnum = [1000, 'success']; // this should define in app/Enum/CodeEnum.php
@@ -147,6 +130,7 @@ return [
               'name'   => $name,
               'age'    => 24,
           ];
+          // return $this->rspHelper->transform(DemoTransform::class)->result($codeEnum, $result);
           return $this->rspHelper->result($codeEnum, $result);
       }
   }
@@ -165,9 +149,7 @@ return [
     }
   }
   ```
-
-
-
+  
 - Response Package Encrypt By Middleware
 
   > First register middle in Kernel 
@@ -206,14 +188,28 @@ return [
   > `config/helper.php` in `package.crypt.instance`
   >
   > have to implements `HelperCryptServiceInterface`
-  
-   
+
+ 
+
+#### CurlHelper
+```php
+/**
+*@return \Symfony\Component\HttpFoundation\Response
+*/
+$response = CurlHelper::get(...);
+$response = CurlHelper::post(...);
+$response = CurlHelper::put(...);
+$response = CurlHelper::delete(...);
+
+```
+
+
 
 #### LogHelper
 
 ###### display log content format
 
-```ini
+```
 [2019-08-20 23:36:37.310839] local.INFO: push cash {"user_id":9510,"cash":"52.00"}
 {"memory_usage":"14 MB","memory_peak_usage":"14 MB","runtime_file":{"file":"/Users/alicfeng/tutorial/github/tmp/demo/app/Console/Commands/AlicFeng.php:69","function":"App\\Console\\Commands\\AlicFeng->handle"}}
 
@@ -262,12 +258,6 @@ LogHelper::debug('source data come from cache');
 LogHelper::notice('sync article successful', ['user_id' => 9510]);
 LogHelper::warning('logout failed', ['user_id' => 8888]);
 ```
-
-
-
-#### CurlHelper
-
-> 完善中
 
 
 

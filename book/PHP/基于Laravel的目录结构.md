@@ -8,7 +8,6 @@
 
 > 如下为一个基于 `Laravel` 常规、简洁的目录结构图( 已忽略某些`Laravel`目录 )
 >
-> 待补充完善 - TODO
 
 ```
 ├── app 															# Laravel框架的应用核心代码目录
@@ -18,6 +17,8 @@
 │   │   │   │── Algo
 │   │   │   │   └── CmdCli.php
 │   │   └── Kernel.php
+│   ├── Constant                      # 常量目录
+│   │   └── CacheKey.php
 │   ├── Enum  												# 枚举类层目录，譬如响应码表
 │   │   └── CodeEnum.php
 │   ├── Event 												# 事件目录
@@ -25,12 +26,12 @@
 │   │   └── Handler.php
 │   ├── Helper 												# 辅助类，比如数组(ArrayHelper)、字符串(StringHelper)辅助类
 │   ├── Http   												# HTTP层目录
-│   │   ├── Controllers								#控制器层目录，根据业务或模块创建对应文件夹集成
+│   │   ├── Controllers								# 控制器层目录，根据业务或模块创建对应文件夹集成
 │   │   │   ├── Algo
 │   │   │   │   └── VideoAlgo.php
 │   │   │   ├── BaseController.php 		# 务必建立控制器基类
 │   │   ├── Kernel.php
-│   │   └── Middleware 								#中间件目录
+│   │   └── Middleware 								# 中间件目录
 │   ├── Jobs 													# 队列
 │   │   └── Queue.php
 │   ├── Lib  													# 项目稍微常改动的库文件
