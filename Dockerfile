@@ -12,7 +12,6 @@ RUN npm set registry https://registry.npm.taobao.org/ && \
     gitbook install && \
     npm cache clear
 
-
 WORKDIR /srv/gitbook
 VOLUME /srv/gitbook
 
