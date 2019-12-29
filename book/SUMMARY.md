@@ -18,6 +18,7 @@
 
 * [架构层面](架构层面/README.md)
     * [扩展目录规约](架构层面/扩展目录规约.md)
+    * [信息安全](架构层面/信息安全.md)
 
 * [标准SDK](标准库sdk/README.md)
     * [KubernetesClient](标准库sdk/KubernetesClient.md)
@@ -37,6 +38,8 @@
     * [那个程序员的Linux常用软件清单](效率与工具/那个程序员的Linux常用软件清单.md)
     
 * [团队分享](团队分享/README.md)
+
+* [技术圈分享](技术圈分享/2019.11.05-CodeReview.md)
     
 * [程序员的自我修养](程序员的自我修养/README.md)
     * [关爱自己](程序员的自我修养/关爱自己.md)

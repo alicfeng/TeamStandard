@@ -2,3 +2,4 @@
 .idea
 /node_modules
 _book
+resource/code/.php_cs.cache

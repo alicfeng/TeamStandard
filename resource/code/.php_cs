@@ -1,6 +1,6 @@
 <?php
 $header = <<<EOF
-What samego team is that is 'one thing, a team, work together'
+What php team is that is 'one thing, a team, work together'
 EOF;
 
 $finder = PhpCsFixer\Finder::create()

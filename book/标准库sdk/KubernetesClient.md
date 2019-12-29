@@ -19,6 +19,7 @@ composer require alicfeng/kubernetes-client:v1.0.0rc -vvv
 - Deployment
 - Pod
 - Job
+- ConfigMap
 
 ###### Will Support
 
