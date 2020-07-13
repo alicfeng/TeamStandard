@@ -36,6 +36,9 @@
     
 * [效率与工具](效率与工具/README.md)
     * [那个程序员的Linux常用软件清单](效率与工具/那个程序员的Linux常用软件清单.md)
+    * [PHPStorm优秀插件集合](效率与工具/PHPStorm优秀插件集合.md)
+    * [导出数据库结构设计markdown文档](效率与工具/导出数据库结构设计markdown文档.md)
+    * [apidoc2markdown](效率与工具/apidoc2markdown.md)
     
 * [团队分享](团队分享/README.md)
 
