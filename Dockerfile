@@ -1,20 +1,19 @@
-FROM node:6-slim
+FROM nginx:1.17.6-alpine
 MAINTAINER AlicFeng <a@samego.com>
 
 ENV VERSION=3.2.3
 
-COPY book.json /srv/gitbook/book.json
-COPY book /srv/gitbook/book
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories\
+    && apk update \
+    && apk --no-cache add --virtual .build-deps nodejs npm \
+    && npm set registry https://registry.npm.taobao.org/ \
+    && npm install --global gitbook-cli -ddd \
+    && gitbook fetch ${VERSION} \
+    && gitbook install \
+    && npm cache clear --force \
+    && apk del .build-deps -f \
+    && rm -rf /src /tmp/* /var/cache/apk/*
 
-RUN npm set registry https://registry.npm.taobao.org/ && \
-    npm install --global gitbook-cli -ddd && \
-    gitbook fetch ${VERSION} && \
-    gitbook install && \
-    npm cache clear
+EXPOSE 80
 
-WORKDIR /srv/gitbook
-VOLUME /srv/gitbook
-
-EXPOSE 4000 35729
-
-CMD ["gitbook","serve"]
+CMD ["gitbook","serve","--port","80"]
