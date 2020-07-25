@@ -7,7 +7,7 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && apk update \
     && apk --no-cache add --virtual .build-deps nodejs npm \
     && npm set registry https://registry.npm.taobao.org/ \
-    && npm install --global gitbook-cli -ddd \
+    && npm install --global gitbook-cli -d \
     && gitbook fetch ${VERSION} \
     && gitbook install \
     && npm cache clear --force \

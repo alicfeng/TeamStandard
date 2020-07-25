@@ -36,24 +36,19 @@
 
 
 
-#### book
+#### 运行阅览
 
-本规范文档基于 `gitbook` 构建 `web`服务，主要是便于阅览。
+> 本规范文档基于 `gitbook` 构建 `web`服务，主要是便于阅览。
 
-###### 拉取镜像
-
-```shell
-# 此流程可以 ignore
-docker pull alicfeng/team_standard:latest
-```
-
-###### 运行规范文档服务
+运行规范文档服务
 
 ```shell
 docker run -itd --name team_standard -p 8088:2015  alicfeng/team_standard:latest
 ```
 
-###### 文档预览
+
+
+文档预览
 
 ![规范文档预览](https://raw.githubusercontent.com/alicfeng/TeamStandard/master/resource/mainUI.png)
 
