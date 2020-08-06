@@ -15,7 +15,6 @@ cache:
 before_script:
   - node --version
   - npm --version
-  - gitbook fetch 3.2.3
   - npm install --global gitbook-cli -d
   - gitbook install
   - gitbook build
