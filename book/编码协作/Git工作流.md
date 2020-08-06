@@ -68,5 +68,77 @@
 
 
 
+#### 姿势演练
+
+现在已经有了版本 1.0.0 发布版本，即已经存在 `tag` **1.0.0** ，现在有新的版本规划 **1.1.0**
+
+那么需要给予发布 **1.0.0** 新建一个版本开发分支
+
+```shell
+git checkout -b 1.1.0_develop
+```
+
+
+
+这个版本有很多不止一个功能，同时有不止一个人参与这个版本迭代开发
+
+研发 a 需要参与视频模块开发，则需要基于 **1.1.0_develop** 创建一个功能分。支命名规范 **{version}_{function}__{author}_{datetime}**
+
+```shell
+git checkout -b 1.1.0_video_a_20200806
+```
+
+
+
+研发 b 需要参与朋友圈模块开发，则需要基于 **1.1.0_develop** 创建一个功能分
+
+```shell
+git checkout -b 1.1.0_friends_group_b_20200805
+```
+
+**切记千万不要在开发分支直接提交代码 开发分支是合并分支**
+
+
+
+开发完毕合并功能分支，处于不断合并的过程
+
+```shell
+git merge 1.1.0_video_a_20200806
+git merge 1.1.0_friends_group_b_20200805
+```
+
+
+
+自测完成后，没有问题那就将功能分支删除
+
+```shell
+git branch -d 1.1.0_video_a_20200806
+git branch -d 1.1.0_friends_group_b_20200805
+```
+
+
+
+提测发现有缺陷，需要基于版本迭代分支创建缺陷修复分支
+
+```shell
+git checkout -b 1.1.0_fixed_video_upload_bug_alicfeng_20200808
+```
+
+
+
+修复完成再合并到迭代分支
+
+```shell
+git merge 1.1.0_fixed_video_upload_bug_alicfeng_20200808
+```
+
+
+
+测试通过后 通过约定的方式 `tag` 即为发布版本 发布 **1.1.0** 版本
+
+```shell
+git tag -a 1.1.0 -m "release:version:1.1.0" 
+```
+
 
 
