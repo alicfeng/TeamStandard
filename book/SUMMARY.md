@@ -19,10 +19,13 @@
 * [架构层面](架构设计/README.md)
     * [扩展目录规约](架构设计/扩展目录规约.md)
     * [信息安全](架构设计/信息安全.md)
+    * [系统配置参数设计](架构设计/系统配置参数设计.md)
 
 * [标准SDK](标准库sdk/README.md)
     * [KubernetesClient](标准库sdk/KubernetesClient.md)
     * [LaravelHelper](标准库sdk/LaravelHelper.md)
+    * [LaravelMigrate](标准库sdk/LaravelMigrate.md)
+    * [Apidoc2Markdown](标准库sdk/Apidoc2Markdown.md)
 
 * [数据库](数据库/README.md)
     * [MySQL规范](数据库/MySQL规范.md)
