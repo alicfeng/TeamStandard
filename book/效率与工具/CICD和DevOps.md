@@ -4,19 +4,21 @@
 
 `CICD`   
 
-`CI` 即持续集成( `Continuous Integration` ), `CD` 即持续部署( `Continuous Deployment` ) 或 持续交付( `Continuous Delivery` )。
+`CI` 即持续集成(`Continuous Integration`)  
+`CD` 即持续部署(`Continuous Deployment`) 或 持续交付(`Continuous Delivery`)
 
 
 
 `DevOps` 
 
-`DevOps`（ `Development` 和 `Operations` 的组合词）是一组过程、方法与系统的统称，用于促进开发、技术运营和质量保障部门之间的沟通、协作与整合。
+`DevOps`(`Development` 和 `Operations` 的组合词)是一组过程、方法与系统的统称，用于促进开发、技术运营和质量保障部门之间的沟通、协作与整合。  
 
-它是一种重视“软件开发人员（ `Dev` ）”和“IT运维技术人员（ `Ops` ）”之间沟通合作的文化、运动或惯例。透过自动化“软件交付”和“架构变更”的流程，来使得构建、测试、发布软件能够更加地快捷、频繁和可靠。
+它是一种重视“软件开发人员(`Dev`)”和“IT运维技术人员(`Ops`)”之间沟通合作的文化、运动或惯例。透过自动化“软件交付”和“架构变更”的流程，来使得构建、测试、发布软件能够更加地快捷、频繁和可靠。  
 
 
 
-从定义来看：其实 `devops` 就是为了让开发、运维和 `QA` 可以高效协作的流程，而在我看来：开发即运维。  
+从定义来看：其实 `devops` 就是为了让开发、运维和 `QA` 可以高效协作的流程  
+而在我看来：开发即运维
 
 
 
@@ -28,15 +30,15 @@
 
 
 
-![当 CI/CD 遇到 Docker，让 DevOps 落地于实践](https://raw.githubusercontent.com/alicfeng/note.samego.com/master/source/images/cicd_devops.png)
+![当 CI/CD 遇到 Docker，让 DevOps 落地于实践](https://s1.ax1x.com/2020/09/21/wqVOJ0.png)
 
 
 
-`Docker` 容器支持 `CI/CD`实现，允许开发人员通过共享映像协同构建代码，同时简化对不同基础架构的部署。使用 `Docker`，您可以构建一个 `DevOps` 实践，该实践与您选择的 `CI` 工具，任何应用程序堆栈，在 `Linux` 或 `Windows` 上运行，在任何基础架构（本地，云端或两者）上集成，常见的 `github` 搭配 `travis` 等。
+`Docker` 容器支持 `CI/CD`实现，允许开发人员通过共享映像协同构建代码，同时简化对不同基础架构的部署。使用 `Docker`，您可以构建一个 `DevOps` 实践，该实践与您选择的 `CI` 工具，任何应用程序堆栈，在 `Linux` 或 `Windows` 上运行，在任何基础架构(本地，云端或两者)上集成，常见的 `github` 搭配 `travis` 等。  
 
 
 
-从上图可见，由研发人员作为流程的开端，同时不需要其他人员的协作参与，即可完成整一个项目迭代、交付、发版等流程，实现项目的开发到上线。
+从上图可见，由研发人员作为流程的开端，同时不需要其他人员的协作参与，即可完成整一个项目迭代、交付、发版等流程，实现项目的开发到上线。  
 
 
 
@@ -173,7 +175,7 @@ volumes:
 
 如下是效果的预览图
 
-![demo效果](https://upload-images.jianshu.io/upload_images/1678789-26cb9940525b2a4f.png)
+![demo效果](https://s1.ax1x.com/2020/09/21/wqZVSK.png)
 
 
 
