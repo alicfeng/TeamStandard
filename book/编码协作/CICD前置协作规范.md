@@ -16,6 +16,8 @@
 
 ###### Drone
 
+做法  
+
 定义持续继承的流水线文件的名称为 `.drone.yml`, 同时置于项目根目录。  
 
 可参考[gogs-drone-docker](https://github.com/alicfeng/gogs-drone-docker)
@@ -25,6 +27,8 @@
 
 
 ###### Jekins
+
+做法  
 
 暂定中
 

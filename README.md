@@ -28,7 +28,8 @@
     - [x] Git提交规范
     - [x] Code风格统一
     - [x] 代码审阅CodeReview
-
+- [x] CICD前置协作规范
+    
 - [x] **PHP规范**
     - [x] 领略代码优雅与整洁之道
     - [x] 基于Laravel的目录结构
@@ -41,7 +42,7 @@
     - [x] 扩展目录规约
     - [x] 系统配置参数设计
     - [x] 平台回调机制设计
-    - [x] [API设计
+    - [x] API设计
 
 - [x] **标准SDK**
     - [x] KubernetesClient
@@ -68,6 +69,7 @@
     - [x] PHPStorm优秀插件集合
     - [x] 导出数据库结构设计markdown文档
     - [x] apidoc2markdown
+    - [x] CICD和DevOps
     
 - [x] **团队分享**
 
