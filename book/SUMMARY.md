@@ -7,6 +7,7 @@
     * [Git提交规范](编码协作/Git提交规范.md)
     * [Code风格统一](编码协作/Code风格统一.md)
     * [代码审阅CodeReview](编码协作/代码审查CodeReview.md)
+    * [CICD前置协作规范](编码协作/CICD前置协作规范.md)
 
 * [PHP规范](PHP/README.md)
     * [领略代码优雅与整洁之道](PHP/领略代码优雅与整洁之道.md)
@@ -47,6 +48,7 @@
     * [PHPStorm优秀插件集合](效率与工具/PHPStorm优秀插件集合.md)
     * [导出数据库结构设计markdown文档](效率与工具/导出数据库结构设计markdown文档.md)
     * [apidoc2markdown](效率与工具/apidoc2markdown.md)
+    * [CICD和DevOps](效率与工具/CICD和DevOps.md)
     
 * [团队分享](团队分享/README.md)
 
