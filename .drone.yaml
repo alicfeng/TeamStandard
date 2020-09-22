@@ -1,0 +1,103 @@
+kind: pipeline
+name: profession-cvmart
+type: docker
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+# 恢复缓存
+- name: restore-cache
+  image: drillster/drone-volume-cache
+  volumes:
+    - name: cache
+      path: /cache
+  settings:
+    restore: true
+    mount:
+      - ./node_modules
+
+
+# 安装依赖
+- name: install-package
+  image: node:latest
+  commands:
+    - node --version
+    - npm --version
+    - npm install --global gitbook-cli -d
+    - gitbook install
+    - gitbook build
+
+
+# 重建缓存
+- name: rebuild-cache
+  image: drillster/drone-volume-cache
+  volumes:
+    - name: cache
+      path: /cache
+  settings:
+    rebuild: true
+    mount:
+      - ./node_modules
+  when:
+    event: push
+
+
+
+# 构建镜像
+- name: build-image
+  image: plugins/docker
+  settings:
+    username:
+      from_secret: DOCKER_USERNAME
+    password:
+      from_secret: DOCKER_PASSWORD
+    repo: alicfeng/team_standard
+    registry: hub.docker.com
+    tags: ${DRONE_TAG=latest}
+    force_tag: true
+    pull_image: false
+
+
+
+# 部署文档
+- name: deploy-doc
+  image: appleboy/drone-ssh
+  settings:
+    host:
+      from_secret: APIDOC_SERVER_HOST
+    username:
+      from_secret: APIDOC_SERVER_USERNAME
+    password:
+      from_secret: APIDOC_SERVER_PASSWORD
+    port: 22
+    script:
+      - cd /home/alicfeng/tutorial/ev/dev_tool/document
+      - docker-compose up -d
+
+
+
+# 邮件通知
+- name: notify-email
+  image: drillster/drone-email
+  settings:
+    from: 18814129510@163.com
+    host: smtp.163.com
+    username: 18814129510@163.com
+    password:
+      from_secret: NOTIFY_EMAIL_PASSWORD
+    port: 465
+    skip_verify: true
+    subject: CICD Profession Notify
+    recipients:
+      - a@samego.com
+  when:
+    status: [ failure, success ]
+
+
+
+# 挂载声明
+volumes:
+  - name: cache
+    host:
+      path: /tmp/cache/node_modules

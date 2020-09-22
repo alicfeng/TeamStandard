@@ -2,8 +2,7 @@
 
 #### Dockerfile
 
-做法  
-
+规范
 - [x] 定义构建镜像的编排文件名称为`Dockerfile`, 同时置于项目根目录
 - [x] 项目的基础镜像依然根据最初的(`php-dev-ops`)计划管理
 
@@ -18,8 +17,7 @@
 
 ###### Drone
 
-做法  
-
+规范
 - [x] 定义持续继承的流水线文件的名称为`.drone.yml`, 同时置于项目根目录  
 
 可参考[gogs-drone-docker](https://github.com/alicfeng/gogs-drone-docker)
@@ -30,7 +28,7 @@
 
 ###### Jekins
 
-做法  
+规范
 
 暂定中
 
