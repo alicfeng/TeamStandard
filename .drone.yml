@@ -1,5 +1,5 @@
 kind: pipeline
-name: profession-cvmart
+name: team-standard
 type: docker
 platform:
   os: linux
@@ -20,7 +20,7 @@ steps:
 
 # 安装依赖
 - name: install-package
-  image: node:latest
+  image: node:10
   commands:
     - node --version
     - npm --version
