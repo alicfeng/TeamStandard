@@ -1,0 +1,103 @@
+kind: pipeline
+name: TeamStandard
+type: docker
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+# 恢复缓存
+- name: restore-cache
+  image: drillster/drone-volume-cache
+  volumes:
+    - name: cache
+      path: /cache
+  settings:
+    restore: true
+    mount:
+      - ./node_modules
+
+
+# 安装依赖
+- name: install-package
+  image: node:10
+  commands:
+    - node --version
+    - npm --version
+    - npm config set registry https://registry.npm.taobao.org
+    - npm install gitbook-cli -ddd
+    - ./node_modules/.bin/gitbook install
+    - ./node_modules/.bin/gitbook build
+
+
+# 重建缓存
+- name: rebuild-cache
+  image: drillster/drone-volume-cache
+  volumes:
+    - name: cache
+      path: /cache
+  settings:
+    rebuild: true
+    mount:
+      - ./node_modules
+  when:
+    event: push
+
+
+
+# 构建镜像
+- name: build-image
+  image: plugins/docker
+  settings:
+    username:
+      from_secret: DOCKER_USERNAME
+    password:
+      from_secret: DOCKER_PASSWORD
+    repo: alicfeng/team_standard
+    tags: ${DRONE_TAG=latest}
+    mirror: http://hub-mirror.c.163.com
+
+
+
+# 部署文档
+- name: deploy-doc
+  image: appleboy/drone-ssh
+  settings:
+    host:
+      from_secret: DOCUMENT_SERVER_HOST
+    username:
+      from_secret: DOCUMENT_SERVER_USERNAME
+    password:
+      from_secret: DOCUMENT_SERVER_PASSWORD
+    port: 22
+    script:
+      - docker pull alicfeng/team_standard:latest
+      - cd /home/alicfeng/tutorial/ev/dev_tool/document
+      - docker-compose up -d team_standard
+
+
+
+# 邮件通知
+- name: notify-email
+  image: drillster/drone-email
+  settings:
+    from: 18814129510@163.com
+    host: smtp.163.com
+    username: 18814129510@163.com
+    password:
+      from_secret: NOTIFY_EMAIL_PASSWORD
+    port: 465
+    skip_verify: true
+    subject: CICD Profession Notify
+    recipients:
+      - a@samego.com
+  when:
+    status: [ failure, success ]
+
+
+
+# 挂载声明
+volumes:
+  - name: cache
+    host:
+      path: /tmp/cache/node_modules
