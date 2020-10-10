@@ -82,7 +82,7 @@ git checkout -b 1.1.0_develop
 
 这个版本有很多不止一个功能，同时有不止一个人参与这个版本迭代开发
 
-研发 a 需要参与视频模块开发，则需要基于 **1.1.0_develop** 创建一个功能分。支命名规范 **{version}_{function}__{author}_{datetime}**
+研发 a 需要参与视频模块开发，则需要基于 **1.1.0_develop** 创建一个功能分。支命名规范 **version_function__author_date**
 
 ```shell
 git checkout -b 1.1.0_video_a_20200806
@@ -138,6 +138,28 @@ git merge 1.1.0_fixed_video_upload_bug_alicfeng_20200808
 
 ```shell
 git tag -a 1.1.0 -m "release:version:1.1.0" 
+```
+
+
+
+线上发现缺陷后 仓库操作与协作约定
+
+> 基于版本标签新建热修复分支
+>
+> 开发分支合并热修复分支 主分支合并开发分支
+>
+> 基于主分支新建新的版本标签
+>
+> 务必在`git`上编写更新内容
+
+```
+git checkout 1.1.0
+git checkout -b hotfix_video_alicfeng_20200809
+git checkout develop
+git merge hotfix_video_alicfeng_20200809
+git checkout master
+git merge develop
+git tag -a 1.1.1 -m "fixed:video:upload"
 ```
 
 
