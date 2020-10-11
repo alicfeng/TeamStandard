@@ -34,7 +34,7 @@
 
 - `hotfix` | 热修复分支
 
-  热修复分支亦称为补丁分支，假设生产分支出现异常等 `bug` 危急的情况，需要建议一个修复分支，使得主分支合并进而解决 `bug`，注意、修复分支在主分支合并的同时必须由开发分支也合并，同时发行版也要合并构建成小版本的发行版，即`release_1.1`、`release_1.2`等。
+  热修复分支亦称为补丁分支，假设生产分支出现异常等 `bug` 危急的情况，需要建议一个修复分支，使得主分支合并进而解决 `bug`，注意、修复分支在主分支合并的同时必须由开发分支也合并，同时发行版也要合并构建成小版本的发行版，测试通过后题需要基于热修复分支打标签。
 
 
 
@@ -152,13 +152,16 @@ git tag -a 1.1.0 -m "release:version:1.1.0"
 >
 > 务必在`git`上编写更新内容
 
-```
+```shell
 git checkout 1.1.0
 git checkout -b hotfix_video_alicfeng_20200809
 git checkout develop
 git merge hotfix_video_alicfeng_20200809
 git checkout master
 git merge develop
+
+# 测试通过后
+git checkout hotfix_video_alicfeng_20200809
 git tag -a 1.1.1 -m "fixed:video:upload"
 ```
 
