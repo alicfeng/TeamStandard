@@ -18,7 +18,6 @@
 </p>
 
 
-
 ## 运行阅览
 
 > 本规范文档基于 `gitbook` 构建 `web`服务，主要是便于阅览。
@@ -28,8 +27,6 @@
 ```shell
 docker run -itd --name team_standard -p 8088:80  alicfeng/team_standard:latest
 ```
-
-
 
 文档预览
 

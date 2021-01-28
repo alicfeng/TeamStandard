@@ -13,8 +13,6 @@ cache:
     - node_modules
 
 before_script:
-  - node --version
-  - npm --version
   - npm install --global gitbook-cli -d
   - gitbook install
   - gitbook build

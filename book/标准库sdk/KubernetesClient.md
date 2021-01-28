@@ -26,6 +26,7 @@
 
 ## 🚀 Quick start
 
+<<<<<<< HEAD
 - **`standard`**
 
   ```
@@ -41,6 +42,13 @@
   ```
 
   
+=======
+```shell
+composer require alicfeng/kubernetes-client -vvv
+```
+
+
+>>>>>>> 2864541dae35bfc192c5cb1a8b17f67d13d93df7
 
 ## ✨ Features
 
