@@ -6,7 +6,7 @@
 <p align="center">
     团队开发规范
      <br>
-    What php team of SameGo is that is 'one thing, a team, work together'
+    What team of SameGo is that is 'one thing, a team, work together'
 </p>
 <p align="center">
     <a href="https://travis-ci.com/github/alicfeng/TeamStandard">
