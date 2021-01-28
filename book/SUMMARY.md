@@ -23,7 +23,6 @@
     * [平台回调机制设计](架构设计/平台回调机制设计.md)
     * [通讯报文结构设计](架构设计/通讯报文结构设计.md)
 
-
 * [标准SDK](标准库sdk/README.md)
     * [KubernetesClient](标准库sdk/KubernetesClient.md)
     * [LaravelHelper](标准库sdk/LaravelHelper.md)
