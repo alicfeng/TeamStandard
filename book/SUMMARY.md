@@ -7,7 +7,7 @@
     * [Git提交规范](编码协作/Git提交规范.md)
     * [Code风格统一](编码协作/Code风格统一.md)
     * [代码审阅CodeReview](编码协作/代码审查CodeReview.md)
-    * [CICD前置协作规范](编码协作/CICD前置协作规范.md)
+    * [CICD协作前置](编码协作/CICD协作前置.md)
 
 * [PHP规范](PHP/README.md)
     * [领略代码优雅与整洁之道](PHP/领略代码优雅与整洁之道.md)
@@ -18,10 +18,10 @@
     * [单元测试](PHP/单元测试.md)
 
 * [架构层面](架构设计/README.md)
-    * [扩展目录规约](架构设计/扩展目录规约.md)
+    * [框架扩展目录规约](架构设计/框架扩展目录规约.md)
     * [系统配置参数设计](架构设计/系统配置参数设计.md)
     * [平台回调机制设计](架构设计/平台回调机制设计.md)
-    * [API设计](架构设计/API设计.md)
+    * [通讯报文结构设计](架构设计/通讯报文结构设计.md)
 
 * [标准SDK](标准库sdk/README.md)
     * [KubernetesClient](标准库sdk/KubernetesClient.md)

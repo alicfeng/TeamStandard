@@ -26,11 +26,21 @@
 
 ## 🚀 Quick start
 
-```shell
-composer require alicfeng/kubernetes-client -vvv
-```
+- **`standard`**
 
+  ```
+  composer require alicfeng/kubernetes-client -vvv
+  ```
 
+- **`Laravel`**
+
+  ```shell
+  php artisan vendor:publish --provider="AlicFeng\Kubernetes\ServiceProvider"
+  # OR
+  php artisan vendor:publish --tag=kubernetes
+  ```
+
+  
 
 ## ✨ Features
 

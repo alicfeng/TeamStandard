@@ -1,9 +1,8 @@
 version: "2"
 services:
-  gitbook:
+  team_standard:
     container_name: team_standard
     image: alicfeng/gitbook:team_standard:latest
     ports:
       - 8888:80
     restart: always
-
