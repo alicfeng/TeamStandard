@@ -50,17 +50,17 @@
     * [信息安全](安全攻略/信息安全.md)
     * [PHP配置安全](安全攻略/PHP配置安全.md)
     
-* [效率与工具](效率与工具/README.md)
-    * [那个程序员的Linux常用软件清单](效率与工具/那个程序员的Linux常用软件清单.md)
-    * [PHPStorm优秀插件集合](效率与工具/PHPStorm优秀插件集合.md)
-    * [导出数据库结构设计markdown文档](效率与工具/导出数据库结构设计markdown文档.md)
-    * [apidoc2markdown](效率与工具/apidoc2markdown.md)
-    * [CICD和DevOps](效率与工具/CICD和DevOps.md)
+* [效率工具](效率工具/README.md)
+    * [那个程序员的Linux常用软件清单](效率工具/那个程序员的Linux常用软件清单.md)
+    * [PHPStorm优秀插件集合](效率工具/PHPStorm优秀插件集合.md)
+    * [导出数据库结构设计markdown文档](效率工具/导出数据库结构设计markdown文档.md)
+    * [apidoc2markdown](效率工具/apidoc2markdown.md)
+    * [CICD和DevOps](效率工具/CICD和DevOps.md)
     
 * [团队分享](团队分享/README.md)
 
-* [技术圈分享](技术圈分享/README.md)
-    * [2019.11.05-CodeReview](技术圈分享/2019.11.05-CodeReview.md)
+* [技术分享](技术分享/README.md)
+    * [2019.11.05-CodeReview](技术分享/2019.11.05-CodeReview.md)
     
 * [自我修养](自我修养/README.md)
     * [关爱自己](自我修养/关爱自己.md)
