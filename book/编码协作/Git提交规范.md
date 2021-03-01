@@ -28,6 +28,8 @@ git commit -m "feature:log:algo log by using websocket"
 
 - `fixed` : 修复bug
 
+- `update` : 更新
+
 - `docs` : 文档改变
 
 - `style` : 代码格式改变
