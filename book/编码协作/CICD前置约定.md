@@ -1,4 +1,4 @@
-# CICD前置的协作规范
+# CICD前置规范
 
 ## Dockerfile
 
