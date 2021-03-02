@@ -62,8 +62,13 @@
     "theme-default": {
       "showLevel": false
     },
+    "fontsettings": {
+      "theme": "white",
+      "family":"serif",
+      "size": 2
+    },
     "tbfed-pagefooter": {
-      "copyright": "Copyright © SameGo 2019",
+      "copyright": "Copyright © ExtremeVision 2020",
       "modify_label": "文件修改时间于 ",
       "modify_format": "YYYY-MM-DD HH:mm:ss"
     },
