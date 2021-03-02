@@ -1,4 +1,5 @@
-# Laravel扩展目录
+# Laravel框架目录规划
+
 ## 前言
 
 无论是大型、中型甚至小型项目，清晰的目录结构是开发过程的好的开始。项目架构设计包含项目目录结构规划，项目目录结构规划属于架构设计的基础，定义项目的目录结构非常重要，举个例子、好比如开发某个需求前落实并清楚地明白需求的交互与实现。
@@ -11,58 +12,57 @@
 >
 
 ```
-├── app 															# Laravel框架的应用核心代码目录
-│   ├── Common 												# 共有类目录
-│   ├── Console												# 终端控制目录，根据业务或模块创建对应文件夹集成
+├── app 										# Laravel框架的应用核心代码目录
+│   ├── Common 								    # 共有类目录
+│   ├── Component 								# 模块化组件目录
+│   ├── Console								    # 终端控制目录，根据业务或模块创建对应文件夹集成
 │   │   ├── Commands
 │   │   │   │── Algo
 │   │   │   │   └── CmdCli.php
 │   │   └── Kernel.php
-│   ├── Constant                      # 常量目录
+│   ├── Constant                                # 常量目录
 │   │   └── CacheKey.php
-│   ├── Enum  												# 枚举类层目录，譬如响应码表
+│   ├── Enum  									# 枚举类层目录，譬如响应码表
 │   │   └── CodeEnum.php
-│   ├── Event 												# 事件目录
-│   ├── Exceptions 										# 异常目录
+│   ├── Event 									# 事件目录
+│   ├── Exceptions 								# 异常目录
 │   │   └── Handler.php
-│   ├── Helper 												# 辅助类，比如数组(ArrayHelper)、字符串(StringHelper)辅助类
-│   ├── Http   												# HTTP层目录
-│   │   ├── Controllers								# 控制器层目录，根据业务或模块创建对应文件夹集成
+│   ├── Helper 									# 辅助类，比如数组(ArrayHelper)、字符串(StringHelper)辅助类
+│   ├── Http   									# HTTP层目录
+│   │   ├── Controllers							# 控制器层目录，根据业务或模块创建对应文件夹集成
 │   │   │   ├── Algo
 │   │   │   │   └── VideoAlgo.php
-│   │   │   ├── BaseController.php 		# 务必建立控制器基类
+│   │   │   ├── BaseController.php 		        # 务必建立控制器基类
 │   │   ├── Kernel.php
-│   │   └── Middleware 								# 中间件目录
-│   ├── Jobs 													# 队列
+│   │   └── Middleware 							# 中间件目录
+│   ├── Jobs 									# 队列
 │   │   └── Queue.php
-│   ├── Lib  													# 项目稍微常改动的库文件
-│   ├── Listeners 										# 监听器目录
-│   ├── Model 												# 模型层目录，根据业务或模块创建对应文件夹集成
+│   ├── Lib  									# 项目稍微常改动的库文件
+│   ├── Listeners 								# 监听器目录
+│   ├── Model 									# 模型层目录，根据业务或模块创建对应文件夹集成
 │   │   ├── BaseModel.php 						# 务必构建模型基类
 │   │   └── User.php
-│   ├── Providers 										# 服务提供注册目录
+│   ├── Providers 								# 服务提供注册目录
 │   │   ├── AppServiceProvider.php
 │   │   ├── AuthServiceProvider.php
 │   │   ├── BroadcastServiceProvider.php
 │   │   ├── EventServiceProvider.php
 │   │   └── RouteServiceProvider.php
-│   ├── Repository 										# 资源层目录，根据业务或模块创建对应文件夹集成
+│   ├── Repository 								# 资源层目录，根据业务或模块创建对应文件夹集成
 │   │   └── CacheRepository.php
-│   ├── Request 											# 请求句柄目录，根据业务或模块创建对应文件夹集成
+│   ├── Request 								# 请求句柄目录，根据业务或模块创建对应文件夹集成
 │   │   └── DemoRequest.php
-│   ├── Rules   											# 规则定义目录
+│   ├── Rules   								# 规则定义目录
 │   │   └── Rule.php
-│   ├── Service 											# 业务层目录，根据业务或模块创建对应文件夹集成
+│   ├── Service 								# 业务层目录，根据业务或模块创建对应文件夹集成
 │   │   ├── BaseService.php 					# 务必构建业务基类
 │   │   └── MessageService.php
-│   ├── User.php
-│   ├── Utils 												# 工具包类
 │   └── Validator
-├── config														# 配置文件目录
-├── tests															# 单元测试目录
-├── etc  															# 项目级别配置文件
-├── sbin 															# 项目依赖或自定义可执行程序目录
-└── lib  															# 库文件，比如ice
+├── config										# 配置文件目录
+├── tests										# 单元测试目录
+├── etc  										# 项目级别配置文件
+├── sbin 										# 项目依赖或自定义可执行程序目录
+└── lib  										# 库文件，比如ice
 ```
 
 
