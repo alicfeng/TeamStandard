@@ -30,7 +30,7 @@ docker run -itd --name team_standard -p 8088:80  alicfeng/team_standard:latest
 
 文档预览
 
-![规范文档预览](https://raw.githubusercontent.com/alicfeng/TeamStandard/master/resource/mainUI.png)
+![规范文档预览](https://raw.githubusercontent.com/alicfeng/TeamStandard/master/resource/main_ui_20210303.png)
 
 
 
