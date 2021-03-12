@@ -25,7 +25,7 @@
 部署文档
 
 ```shell
-docker run -itd --name team_standard -p 8088:80  alicfeng/team_standard:latest
+docker run -itd --name team_standard -p 8888:80 alicfeng/ts.samego.com:latest
 ```
 
 

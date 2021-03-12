@@ -22,5 +22,5 @@ services:
 
 script:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker build -t alicfeng/team_standard:latest -f Dockerfile .
-  - docker push alicfeng/team_standard:latest
+  - docker build -t alicfeng/ts.samego.com:latest -f Dockerfile .
+  - docker push alicfeng/ts.samego.com:latest
