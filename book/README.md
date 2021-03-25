@@ -1,4 +1,4 @@
-# 团队开发规范 | Team Develop Standard
+# 团队开发规范 ( Team Develop Standard )
 
 ## 为什么要定义团队开发规范
 
