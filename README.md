@@ -15,6 +15,9 @@
     <a href="https://packagist.org/packages/alicfeng/TeamStandard">
         <img src="https://poser.pugx.org/alicfeng/TeamStandard/license.svg" alt="License">
     </a>
+    <a href="https://app.netlify.com/sites/tender-haibt-219417/deploys">
+        <img src="https://api.netlify.com/api/v1/badges/22821d03-2bc5-4e5e-afae-8178418e9a6b/deploy-status" alt="Netlify Status">
+    </a>
 </p>
 
 
