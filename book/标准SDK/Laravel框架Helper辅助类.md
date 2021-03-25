@@ -1,4 +1,4 @@
-Laravel-helper
+# Laravel-helper
 ==============
 
 Laravel-helper Component is a simple package that has been designed to help you generate code specification and robust architecture.

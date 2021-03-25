@@ -9,12 +9,12 @@
     * [注释规范](编码协作/注释规范.md)
     * [接口文档](编码协作/接口文档.md)
     * [代码审阅](编码协作/代码审阅.md)
-    * [Code风格统一](编码协作/Code风格统一.md)
-    * [Code质量工具](编码协作/Code质量工具.md)
+    * [代码质量工具](编码协作/代码质量工具.md)
     * [CICD协作前置](编码协作/CICD协作前置.md)
     * [Git协作工作流](编码协作/Git协作工作流.md)
     * [Git代码提交规范](编码协作/Git代码提交规范.md)
     * [Git项目分组规划](编码协作/Git项目分组规划.md)
+    * [PHP代码风格统一](编码协作/PHP代码风格统一.md)
     * [代码审阅CodeReview](编码协作/代码审阅.md)
 
 
@@ -58,7 +58,6 @@
 
 * [效率工具](效率工具/README.md)
     * [CICD和DevOps](效率工具/CICD和DevOps.md)
-    * [apidoc2markdown](效率工具/apidoc2markdown.md)
     * [PHPStorm优秀插件集合](效率工具/PHPStorm优秀插件集合.md)
     * [那个程序员的Linux常用软件清单](效率工具/那个程序员的Linux常用软件清单.md)
     * [导出数据库结构设计markdown文档](效率工具/导出数据库结构设计markdown文档.md)
