@@ -89,7 +89,7 @@ $finder = PhpCsFixer\Finder::create()
     ->ignoreDotFiles(true)
     ->ignoreVCS(true);
 
-$rules = array(
+$rules  = array(
     '@Symfony'                                   => true,
     'header_comment'                             => array('header' => $header),
     'array_syntax'                               => array('syntax' => 'short'),
@@ -97,7 +97,7 @@ $rules = array(
     'no_useless_else'                            => true, // 删除没有使用的else节点
     'no_useless_return'                          => true, // 删除没有使用的return语句
     'self_accessor'                              => true, // 在当前类中使用 self 代替类名
-    'php_unit_construct'                         => true, // 单元测试类必须有构建函数
+    'php_unit_construct'                         => true,
     'single_quote'                               => true, // 简单字符串应该使用单引号代替双引号
     'no_unused_imports'                          => true, // 删除没用到的use
     'no_singleline_whitespace_before_semicolons' => true, // 禁止只有单行空格和分号的写法
@@ -117,13 +117,33 @@ $rules = array(
             'try'
         ]
     ],// 空行换行必须在任何已配置的语句之前
-    'binary_operator_spaces'                     => ['default' => 'align_single_space'], //等号对齐、数字箭头符号对齐
+    'binary_operator_spaces'                     => [
+        'default' => 'align_single_space'
+    ], //等号对齐、数字箭头符号对齐
+    'align_multiline_comment'                    => [
+        'comment_type' => 'phpdocs_only'
+    ],
+    'lowercase_cast'                             => true,// 类型强制小写
+    'lowercase_constants'                        => true,// 常量为小写
+    'lowercase_static_reference'                 => true,// 静态调用为小写
+    'no_blank_lines_after_class_opening'         => true,
+    'phpdoc_separation'                          => false,// 不同注释部分按照单空行隔开
+    'phpdoc_single_line_var_spacing'             => true,
+    'phpdoc_indent'                              => true,
+    'no_superfluous_phpdoc_tags'                 => false,// 删除没有提供有效信息的@param和@return注解
+    'phpdoc_align'                               => [
+        'align' => 'vertical',
+        'tags'  => [
+            'param', 'throws', 'type', 'var', 'property'
+        ]
+    ]
 );
 
 return PhpCsFixer\Config::create()
     ->setRiskyAllowed(true)
     ->setRules($rules)
     ->setFinder($finder);
+
 ```
 
 项目的代码风格统一配置文件放置于项目的根目录，默认的命名为`.php_cs`。

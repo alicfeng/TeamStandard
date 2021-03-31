@@ -6,7 +6,7 @@
 <p align="center">
     A PHP Client For Manage Kubernetes Cluster
      <br>
-    Based on official of Kubernetest interface as well as dependent GuzzleHttp to generate.
+    Based on official of Kubernetes interface as well as dependent GuzzleHttp to generate.
 </p>
 <p align="center">
     <a href="https://travis-ci.com/github/alicfeng/KubernetesClient">
@@ -28,17 +28,18 @@
 
 - **`standard`**
 
-  ```
-  composer require alicfeng/kubernetes-client -vvv
-  ```
+```
+composer require alicfeng/kubernetes-client -vvv
+```
 
 - **`Laravel`**
 
-  ```shell
-  php artisan vendor:publish --provider="AlicFeng\Kubernetes\ServiceProvider"
-  # OR
-  php artisan vendor:publish --tag=kubernetes
-  ```
+```shell
+php artisan vendor:publish --provider="AlicFeng\Kubernetes\ServiceProvider"
+# OR
+php artisan vendor:publish --tag=kubernetes
+php artisan vendor:publish --tag=asm
+```
 
   
 
@@ -54,14 +55,17 @@
 - [x] Secrets
 - [x] StatefulSet
 - [x] Event
-- [x] Pvc
 - [x] PersistentVolumeClaim
 - [x] Ingress
 - [x] ReplicationController
+- [ ] GagaWay
+- [x] VirtualService
 
 
 
 ## ☛ Usage
+
+Authorization support including token,username & password as well as cert file
 
 ```php
 use AlicFeng\Kubernetes\Kubernetes;
@@ -92,25 +96,27 @@ $spec     = [
 
 # Create Service
 $service->setMetadata($metadata)->setSpec($spec)->create();
-# or 
-$service->setApiVersion('v1')->setKind('Service')->create($yaml);
 
 # Patch Service
-$service->apply();
+$service->apply('name');
+
 # Delete Service
-$service->delete('service-name');
+$service->delete('name');
+
 # Service Exist
-$service->list()->exist('service-name');
+$service->list()->exist('name');
+
 # Item Service
-$service->list()->item('service-name');
+$service->list()->item('name');
 ```
 
 
 
 ## 💖 Thanks developer
 
-- [lljiuzheyang](https://github.com/lljiuzheyang) 
 - [lsrong](https://github.com/lsrong)
+
+- [lljiuzheyang](https://github.com/lljiuzheyang) 
 
 
 
