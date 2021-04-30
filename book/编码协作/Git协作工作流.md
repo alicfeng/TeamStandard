@@ -74,6 +74,8 @@
 
 ## 姿势演练
 
+> 如下部分命名会携带 时间、日期信息 视团队而定，目的是防止过多临时分支存在，谁的谁删除
+
 现在已经有了版本 1.0.0 发布版本，即已经存在 `tag` **1.0.0** ，现在有新的版本规划 **1.1.0**
 
 那么需要给予发布 **1.0.0** 新建一个版本开发分支
@@ -86,11 +88,11 @@ git checkout -b 1.1.0_develop
 
 这个版本有很多不止一个功能，同时有不止一个人参与这个版本迭代开发
 
-研发 a 需要参与视频模块开发，则需要基于 **1.1.0_develop** 创建一个功能分。支命名规范 **{version}_{function}__{author}_{datetime}**
+研发 a 需要参与视频模块开发，则需要基于 **1.1.0_develop** 创建一个功能分。支命名规范 **feature/{version}_{function}__{author}_{datetime}**
 
 
 ```shell
-git checkout -b 1.1.0_video_a_20200806
+git checkout -b feature/1.1.0_video_a_20200806
 ```
 
 
@@ -98,7 +100,7 @@ git checkout -b 1.1.0_video_a_20200806
 研发 b 需要参与朋友圈模块开发，则需要基于 **1.1.0_develop** 创建一个功能分
 
 ```shell
-git checkout -b 1.1.0_friends_group_b_20200805
+git checkout -b feature/1.1.0_friends_group_b_20200805
 ```
 
 **切记千万不要在开发分支直接提交代码 开发分支是合并分支**
@@ -108,8 +110,8 @@ git checkout -b 1.1.0_friends_group_b_20200805
 开发完毕合并功能分支，处于不断合并的过程
 
 ```shell
-git merge 1.1.0_video_a_20200806
-git merge 1.1.0_friends_group_b_20200805
+git merge feature/1.1.0_video_a_20200806
+git merge feature/1.1.0_friends_group_b_20200805
 ```
 
 
@@ -117,8 +119,8 @@ git merge 1.1.0_friends_group_b_20200805
 自测完成后，没有问题那就将功能分支删除
 
 ```shell
-git branch -d 1.1.0_video_a_20200806
-git branch -d 1.1.0_friends_group_b_20200805
+git branch -d feature/1.1.0_video_a_20200806
+git branch -d feature/1.1.0_friends_group_b_20200805
 ```
 
 
@@ -126,7 +128,7 @@ git branch -d 1.1.0_friends_group_b_20200805
 提测发现有缺陷，需要基于版本迭代分支创建缺陷修复分支
 
 ```shell
-git checkout -b 1.1.0_fixed_video_upload_bug_alicfeng_20200808
+git checkout -b fix/1.1.0_video_upload_bug_alicfeng_20200808
 ```
 
 
@@ -134,7 +136,7 @@ git checkout -b 1.1.0_fixed_video_upload_bug_alicfeng_20200808
 修复完成再合并到迭代分支
 
 ```shell
-git merge 1.1.0_fixed_video_upload_bug_alicfeng_20200808
+git merge fix/1.1.0_video_upload_bug_alicfeng_20200808
 ```
 
 
@@ -158,14 +160,14 @@ git tag -a 1.1.0 -m "release:version:1.1.0"
 
 ```shell
 git checkout 1.1.0
-git checkout -b hotfix_video_alicfeng_20200809
+git checkout -b hotfix/video_alicfeng_20200809
 git checkout develop
-git merge hotfix_video_alicfeng_20200809
+git merge hotfix/video_alicfeng_20200809
 git checkout master
 git merge develop
 
 # 测试通过后
-git checkout hotfix_video_alicfeng_20200809
+git checkout hotfix/video_alicfeng_20200809
 git tag -a 1.1.1 -m "fixed:video:upload"
 ```
 
