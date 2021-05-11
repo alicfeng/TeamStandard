@@ -33,10 +33,6 @@
     * [配置信息与环境变量](基础架构/配置信息与环境变量.md)
     * [Http-Api-Json设计](基础架构/Http-Api-Json设计.md)
     * [Laravel框架目录规划](基础架构/Laravel框架目录规划.md)
-
-
-* [前端规范](前端规范/README.md)
-    * [TODO](前端规范/README.md)
     
 
 * [标准SDK](标准SDK/README.md)
