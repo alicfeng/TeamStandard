@@ -36,6 +36,8 @@
     
 
 * [标准SDK](标准SDK/README.md)
+    * [服务通信远程调用客户端](标准SDK/服务通信远程调用客户端.md)
+    * [服务通信消息队列中间件](标准SDK/服务通信消息队列中间件.md)
     * [Apidoc转Markdown文档](标准SDK/Apidoc转Markdown文档.md)
     * [Kubernetes之PHP客户端](标准SDK/Kubernetes之PHP客户端.md)
     * [Laravel框架Migrate增强](标准SDK/Laravel框架Migrate增强.md)
