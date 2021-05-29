@@ -39,7 +39,9 @@
     * [服务通信远程调用客户端](标准SDK/服务通信远程调用客户端.md)
     * [服务通信消息队列中间件](标准SDK/服务通信消息队列中间件.md)
     * [Apidoc转Markdown文档](标准SDK/Apidoc转Markdown文档.md)
+    * [Helper辅助类底层依赖库](标准SDK/Helper辅助类底层依赖库.md)
     * [Kubernetes之PHP客户端](标准SDK/Kubernetes之PHP客户端.md)
+    * [Laravel框架Response库](标准SDK/Laravel框架Response库.md)
     * [Laravel框架Migrate增强](标准SDK/Laravel框架Migrate增强.md)
     * [Laravel框架Helper辅助类](标准SDK/Laravel框架Helper辅助类.md)
 
