@@ -13,7 +13,8 @@ cache:
     - node_modules
 
 before_script:
-  - npm install --global gitbook-cli -d
+  - npm install --global gitbook-cli -ddd
+  - npm install gitbook-plugin-todo gitbook-plugin-mermaid-v8 -ddd
   - gitbook install
   - gitbook build
 

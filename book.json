@@ -47,6 +47,7 @@
     "-lunr",
     "-search",
     "search-plus",
+    "mermaid-v8",
     "puml",
     "todo",
     "advanced-emoji",
@@ -63,7 +64,7 @@
     },
     "fontsettings": {
       "theme": "white",
-      "family":"serif",
+      "family": "serif",
       "size": 2
     },
     "tbfed-pagefooter": {
