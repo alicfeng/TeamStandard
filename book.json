@@ -53,9 +53,14 @@
     "advanced-emoji",
     "chart",
     "code",
-    "highlight",
+    "prism",
+    "github-buttons",
+    "-highlight",
     "alerts",
-    "theme-comscore"
+    "theme-comscore",
+    "baidu-tongji",
+    "splitter",
+    "donate"
   ],
   "variables": {},
   "pluginsConfig": {
@@ -85,6 +90,16 @@
       "css": [
         "prism-themes/themes/prism-base16-ateliersulphurpool.light.css"
       ]
+    },
+    "donate": {
+      "button": "打赏小二",
+      "alipayText": "支付宝打赏",
+      "wechatText": "微信打赏",
+      "alipay": "https://github.com/alicfeng/storage.draw.io/blob/master/donate/alipay.png?raw=true",
+      "wechat": "https://github.com/alicfeng/storage.draw.io/blob/master/donate/wechat.png?raw=true"
+    },
+    "baidu-tongji": {
+      "token": "f7b46a4ed89aee523dde2939017d4305"
     }
   }
 }
