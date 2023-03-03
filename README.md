@@ -31,7 +31,7 @@ docker run -itd --name team_standard -p 8888:80 alicfeng/ts.samego.com:latest
 
 在线文档
 
-[https://ts.samego.com](https://ts.samego.com)
+[https://ts.samego.cn](https://ts.samego.cn)
 
 
 文档预览
